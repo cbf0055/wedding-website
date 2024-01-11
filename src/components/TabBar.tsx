@@ -1,27 +1,75 @@
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  SimpleGrid,
+} from "@chakra-ui/react";
+import venue from "../assets/venue.jpg";
+import proposal from "../assets/proposal2.jpg";
+import InfoCard from "./InfoCard";
 
 const TabBar = () => {
   return (
     <Tabs>
       <TabList>
         <Tab>Wedding Info</Tab>
-        <Tab>Registry</Tab>
+        <Tab>RSVP</Tab>
         <Tab>Wedding Party</Tab>
       </TabList>
 
       <TabPanels>
         <TabPanel>
-          <p>
-            Wedding is August 16, 2024 Located at Hightpointe Estate 5555 Co Rd
-            258, Liberty Hill, TX 78642 Starting at 5pm.{" "}
-          </p>
+          <div className="container">
+            <header className="header">
+              <h1>Welcome!</h1>
+            </header>
+
+            <section className="section">
+              <div className="card centered-image-container">
+                <p text-align="center">
+                  Our wedding will be on Friday August 16, 2024! It will be
+                  located at Highpointe Estate in Liberty Hill, Texas. The
+                  address is 5555 Co Rd 258, Liberty Hill, TX 78642.
+                </p>
+                <img src={venue} className="image" alt="Venue Image"></img>
+                <header className="header">
+                  <h1>How we met!</h1>
+                </header>
+                <p text-align="center">
+                  We met on a dating app called Bumble! Our first date was at a
+                  coffee shop in Denton, Texas called Golden Boy Coffee. We sat
+                  and talked for a few hours, got to know each other well. The
+                  rest is history!
+                </p>
+                <header className="header">
+                  <h1>The Proposal!</h1>
+                </header>
+                <p text-align="center">
+                  We went on a trip to Europe in the Summer of 2023, visiting
+                  many countries. We visited Germany, the Netherlands, Belgium,
+                  the United Kingdom and, our last stop was France. Chandler
+                  proposed at the last stop of our trip at the Eiffel Tower!
+                </p>
+                <img
+                  src={proposal}
+                  className="image"
+                  alt="Proposal Image"
+                ></img>
+              </div>
+            </section>
+          </div>
         </TabPanel>
+        <TabPanel>Coming soon</TabPanel>
         <TabPanel>
-          <p>https://www.amazon.com/wedding/registry/11WX48EK7UR58</p>
-        </TabPanel>
-        <TabPanel>
-          <p>Groomsmen: Donovan, Gavin, Joe, Jeremy, Nick, Kyle</p>
-          <p>Bridesmaids: Crimson, Isabel, Emily, Olivia, Alyson, Megan</p>
+          <SimpleGrid
+            columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
+            spacing={10}
+            padding="10px"
+          >
+            <InfoCard></InfoCard>
+          </SimpleGrid>
         </TabPanel>
       </TabPanels>
     </Tabs>
