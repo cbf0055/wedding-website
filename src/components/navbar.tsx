@@ -13,7 +13,13 @@ const NavBar = () => {
         View registry
       </a>
       <Text>Lauren and Chandler</Text>
-      <ColorModeSwitch></ColorModeSwitch>
+      <a
+        href="https://www.amazon.com/wedding/registry/11WX48EK7UR58"
+        className="button"
+      >
+        {" "}
+        View cash funds
+      </a>
     </HStack>
   );
 };
