@@ -14,7 +14,7 @@ const NavBar = () => {
       </a>
       <Text>Lauren and Chandler</Text>
       <a
-        href="https://www.amazon.com/wedding/registry/11WX48EK7UR58"
+        href="https://www.zola.com/registry/chandlerandlauren2024/"
         className="button"
       >
         {" "}
