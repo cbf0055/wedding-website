@@ -4,7 +4,8 @@ import ColorModeSwitch from "./ColorModeSwitch";
 
 const NavBar = () => {
   return (
-    <HStack justifyContent="space-between" padding="10px">
+    <HStack>
+      <div className="header">Lauren and Chandler's Wedding Website</div>
       <a
         href="https://www.amazon.com/wedding/registry/11WX48EK7UR58"
         className="button"
@@ -12,13 +13,12 @@ const NavBar = () => {
         {" "}
         View registry
       </a>
-      <Text>Lauren and Chandler</Text>
       <a
-        href="https://www.zola.com/registry/chandlerandlauren2024/"
-        className="button"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeJvqjULXVwFQUjlPneXCm-sN2RgiknSQvIsqYwqnAs1KDJKw/viewform?usp=sf_link"
+        className="button2"
       >
         {" "}
-        View cash funds
+        RSVP Here
       </a>
     </HStack>
   );

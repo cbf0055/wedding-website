@@ -9,13 +9,23 @@ import {
 import venue from "../assets/venue.jpg";
 import proposal from "../assets/proposal2.jpg";
 import InfoCard from "./InfoCard";
+import React, { useState } from "react";
 
 const TabBar = () => {
+  const [name, setName] = useState("");
+  const [guests, setGuests] = useState("");
+  async function rsvp(ev: any) {
+    ev.preventDefault;
+    await fetch("http://localhost:4000/rsvp", {
+      method: "POST",
+      body: JSON.stringify({ name, guests }),
+      headers: { "Content-Type": "application/json" },
+    });
+  }
   return (
     <Tabs>
       <TabList>
         <Tab>Wedding Info</Tab>
-        <Tab>RSVP</Tab>
         <Tab>Wedding Party</Tab>
       </TabList>
 
@@ -61,7 +71,6 @@ const TabBar = () => {
             </section>
           </div>
         </TabPanel>
-        <TabPanel>Coming soon</TabPanel>
         <TabPanel>
           <SimpleGrid
             columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
