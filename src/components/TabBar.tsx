@@ -9,6 +9,8 @@ import {
 import venue from "../assets/venue.jpg";
 import proposal from "../assets/proposal2.jpg";
 import InfoCard from "./InfoCard";
+import sheraton from "../assets/Sheraton.jpg";
+import springhill from "../assets/Springhill.jpg";
 import React, { useState } from "react";
 
 const TabBar = () => {
@@ -27,6 +29,7 @@ const TabBar = () => {
       <TabList>
         <Tab>Wedding Info</Tab>
         <Tab>Wedding Party</Tab>
+        <Tab>Hotel Info</Tab>
       </TabList>
 
       <TabPanels>
@@ -39,11 +42,11 @@ const TabBar = () => {
             <section className="section">
               <div className="card centered-image-container">
                 <p text-align="center">
-                  Our wedding will be on Friday August 16, 2024! It will be
-                  located at Highpointe Estate in Liberty Hill, Texas. The
-                  address is 5555 Co Rd 258, Liberty Hill, TX 78642.
+                  Our wedding will be on Friday August 16, 2024 at 5:30 pm! It
+                  will be located at Highpointe Estate in Liberty Hill, Texas.
+                  The address is 5555 Co Rd 258, Liberty Hill, TX 78642.
                 </p>
-                <img src={venue} className="image" alt="Venue Image"></img>
+                <img src={venue} className="home-image" alt="Venue Image"></img>
                 <header className="header">
                   <h1>How we met!</h1>
                 </header>
@@ -64,7 +67,7 @@ const TabBar = () => {
                 </p>
                 <img
                   src={proposal}
-                  className="image"
+                  className="home-image"
                   alt="Proposal Image"
                 ></img>
               </div>
@@ -79,6 +82,47 @@ const TabBar = () => {
           >
             <InfoCard></InfoCard>
           </SimpleGrid>
+        </TabPanel>
+        <TabPanel>
+          <div className="hotel">
+            <p className="title">
+              Sheraton Austin Georgetown Hotel & Conference Center 20 minute
+              drive to the venue
+            </p>
+            <p>$151 per night for one King </p>
+            <p>$171 per night for 2 Queens</p>
+            <p>
+              Amenities include: Business center, Fitness center, Free
+              high-speed internet, Meeting event space, Parking, Pet friendly.
+            </p>
+            <img src={sheraton} className="hotel-image" alt="Sheraton" />
+            <a
+              href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1715703066186&key=GRP&app=resvlink"
+              className="book-link"
+            >
+              Book here
+            </a>
+          </div>
+
+          <div className="hotel">
+            <p className="title">
+              SpringHill Suites Austin Cedar Park 24 minute drive to the venue
+            </p>
+            <p>$129 per night for one King </p>
+            <p>$139 per night for 2 Queens</p>
+            <p>
+              Amenities include: Business center, Fitness center, Free
+              breakfast, Free high-speed internet, Meeting event space, Onsite
+              Bar, Parking.
+            </p>
+            <img src={springhill} className="hotel-image" alt="SpringHill" />
+            <a
+              href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1717697930079&key=GRP&app=resvlink"
+              className="book-link"
+            >
+              Book here
+            </a>
+          </div>
         </TabPanel>
       </TabPanels>
     </Tabs>
