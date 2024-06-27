@@ -35,6 +35,12 @@ const TabBar = () => {
       <TabPanels>
         <TabPanel>
           <div className="container">
+            <a
+              className="alert"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeJvqjULXVwFQUjlPneXCm-sN2RgiknSQvIsqYwqnAs1KDJKw/viewform?usp=sf_link"
+            >
+              CLICK HERE TO RSVP, RSVP BY JULY 12
+            </a>
             <header className="header">
               <h1>Welcome!</h1>
             </header>

@@ -121,3 +121,8 @@ body {
   
   margin: auto;
 }
+a.alert{
+  font-weight: bold;
+  font-size: large;
+  color:red;
+}

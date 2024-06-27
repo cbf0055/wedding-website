@@ -49,3 +49,7 @@ a.button{
 div.header{
   padding-left: 10px;
 }
+a.alert{
+  font-weight: bold;
+  font-size: large;
+}
